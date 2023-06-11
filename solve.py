@@ -25,7 +25,7 @@ def li_match_s_nums(number, s, li):  # 그 전까지의 구한 정답가능성�
     result = []
     for n in li:
         match = 0
-        for i in [0, 1, 2]:
+        for i in [0, 1, 2, 3]:
             if number[i] == n[i]:
                 match += 1
         if match == s:
@@ -37,14 +37,14 @@ def li_match_s_nums(number, s, li):  # 그 전까지의 구한 정답가능성�
 def li_match_sb_nums(number, sb, li):  # sb = s + b
     have_i = []  # number의 0, 1, 2, 3 인덱스 값이 있는 숫자의 모임
 
-    for i in range(3):
+    for i in range(4):
         have_i.append(li_have_n(number[i], li))
     # print(have_i)
 
     result = []
     for i in li:
         is_cnt = 0
-        for j in range(3):
+        for j in range(4):
             if i in have_i[j]:
                 is_cnt += 1
         if is_cnt == sb:

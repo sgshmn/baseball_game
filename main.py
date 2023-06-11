@@ -9,7 +9,7 @@ print(q)
 # print('>> 2에서 8사이 숫자를 쓰면 돼요')
 # al = int(input('>> '))  # answer length
 
-al = 3
+al = 4
 
 mn = 10 ** al  # max number
 li = list(map(str, list(range(1, mn))))
